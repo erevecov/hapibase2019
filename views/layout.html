@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {{! Document Layout}}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hapi2019base</title>
+    <link rel="stylesheet" href="/public/bootstrap-4.1.3/css/bootstrap.lux.min.css">
+    <style>
+       .navbar {
+            padding-top: 1px;
+            padding-bottom: 1px;
+            margin-bottom: 5px;
+        }
+    </style>
+    {{#block "css"}}
+    {{/block}}
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/"> BASE <!--<img class="logo" src="/public/img/logo.png" alt="">--></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a id="budget-link" class="nav-link" href="/"><i class="fas fa-file-alt"></i>&nbsp; Home</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="configurationsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-cog"></i> &nbsp; Administración
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="configurationsDropdown">
+                        <a class="dropdown-item" href="/"><i class="fas fa-users"></i>&nbsp; TEST 1</a>
+                        <a class="dropdown-item" href="/"><i class="fas fa-edit"></i>&nbsp; TEST 2</a>
+                    </div>
+                </li>
+                <li class="nav-item"><div id="cart"></div></li>
+            </ul>
+
+            <div class="form-inline my-2 my-lg-0 white-text">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a style="text-transform: capitalize; font-size:18px; color:white;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user"></i> &nbsp;test&nbsp;
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" id="userRole"></a>
+                            
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/logout"><i style="color:#F44336;" class="fas fa-times">&nbsp;</i>Cerrar sesión </i></a>
+                        </div>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {{{ content }}}
+
+    <script src="/public/js/jquery-3.3.1.min.js"></script>
+    <script src="/public/bootstrap-4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            console.log('test')
+        })
+
+    </script>
+    {{#block "js"}}
+    {{/block}}
+</body>
+</html>
